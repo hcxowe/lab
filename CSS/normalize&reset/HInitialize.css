@@ -1,0 +1,215 @@
+/**
+ * 1. 设置默认字体为 sans-serif
+ * 2. 阻止 ios 与 ie 在设备方向变更之后文本尺寸调整, 没有禁用用户放大
+ */
+html {
+font-family: sans-serif; /* 1 */
+-ms-text-size-adjust: 100%; /* 2 */
+-webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* 去掉 body 默认的外边距 */
+body {
+    margin: 0;
+}
+
+/* 视个人需求添加 */
+html, body {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+/* html5标签, 主要为 IE 支持, 如果没用到这些标签无需设置 */
+/* article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+    display: inline-block; 
+    vertical-align: baseline;
+} 
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}*/
+
+/* 去掉默认的上下边距, 根据具体需求覆盖 */
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+/* IE 支持 hidden 属性 */
+[hidden],
+template {
+    display: none;
+}
+
+/**
+ * 去掉 IE10 激活的 a 有个灰色背景
+ */
+a {
+    background-color: transparent;
+}
+  
+/**
+* 去掉active 与 hover 状态下的 outline, 以提高 focus 状态 a 元素的可图形
+*/
+a:active,
+a:hover {
+    outline: 0;
+}
+
+/**
+ * 阻止 sub 与 sup 影响 line-height 
+ */
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+/**
+ * 在 IE8/9/10, 去掉当 img 在 a 元素内时出现的边框
+ */
+img {
+    border: 0;
+}
+
+/**
+ * 重置 overflow 为 hidden 在 IE 9/10/11
+ */
+svg:not(:root) {
+    overflow: hidden;
+}
+
+/**
+* 统一 firefox 于其他游览器
+*/
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+}
+  
+button,
+input,
+optgroup,
+select,
+textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0; 
+}
+
+button {
+    overflow: visible;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button; 
+    cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+input {
+    line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0; 
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield; 
+    box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/**
+ * 重置 在 IE 8910, textarea 默认的 overflow 为垂直滚动条
+ */
+textarea {
+    overflow: auto;
+}
+
+/**
+ * 移除 table 单元格之间的空隙
+ * 设置单元格不因内容而变化fixed
+ */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+
+td,
+th {
+    padding: 0;
+}
+
+ul,
+ol {
+	margin-top: 0;
+	margin-bottom: 0;
+	list-style: none;
+	padding-left: 0;
+}
+  
